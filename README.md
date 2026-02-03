@@ -1,48 +1,101 @@
-# Photography Portfolio
+# Pooja Photography Portfolio
 
-This repository contains a simple Node/Express photography portfolio with an admin panel.
+A professional photography portfolio website with category filtering, responsive image gallery, and lightbox functionality. Built with HTML, CSS, and JavaScript for easy deployment to GitHub Pages.
 
-Quick start
+## Features
 
-1. Install dependencies:
+- 📸 **Category Filtering** - Filter photos by categories (All, Baby Shoot, Wedding, Portrait, Recent)
+- 🖼️ **Responsive Gallery** - Beautiful grid layout that adapts to all screen sizes
+- 🔍 **Lightbox Viewer** - Click any image to view in fullscreen mode
+- 🎨 **Dark Theme** - Professional dark interface perfect for photography portfolios
+- 📱 **Mobile Friendly** - Fully responsive design for all devices
+- ⚡ **Fast Loading** - No build process required, pure HTML/CSS/JS
+- ☁️ **GitHub Pages Ready** - Zero configuration deployment
 
-```bash
-npm install
+## Quick Start
+
+1. **Fork this repository** to your GitHub account
+2. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Scroll down to "Pages" section
+   - Select "Deploy from a branch"
+   - Choose "main" branch and "/ (root)" folder
+   - Click "Save"
+
+3. **Customize your portfolio**:
+   - Edit `index.html` to update your photographer name and bio
+   - Replace placeholder images with your own photography
+   - Add/remove categories in the sidebar
+   - Modify `photography-styles.css` to change colors and styling
+
+4. **View your live site**:
+   - Your website will be available at: `https://yourusername.github.io/new-portfolio`
+   - It may take a few minutes for GitHub Pages to deploy initially
+
+## Structure
+
+```
+new-portfolio/
+├── index.html              # Main HTML file with gallery
+├── photography-styles.css  # Photography portfolio styling
+├── styles.css             # Original portfolio styles (backup)
+└── README.md              # This file
 ```
 
-2. Configure admin credentials (run interactive setup):
+## Customization
 
-```bash
-npm run setup
+### Update Photographer Information
+Edit the content in `index.html`:
+- Photographer name and business name
+- Logo and tagline
+- Categories in the sidebar
+- Photo titles and descriptions
+
+### Add Your Own Photos
+Replace the placeholder Unsplash images:
+```html
+<img src="your-photo-url.jpg" alt="Photo description" class="photo-img">
 ```
 
-3. Start the server:
+### Change Colors
+Modify the color scheme in `photography-styles.css`:
+- Accent color: Change `#ff6b6b` to your preferred color
+- Background colors: Modify `#1a1a1a` and `#2d2d2d`
+- Text colors: Adjust `#fff`, `#ddd`, `#aaa`
 
-```bash
-npm start
+### Add New Categories
+1. Add a new button in the sidebar:
+```html
+<button class="category-btn" data-category="new-category">New Category</button>
+```
+2. Add photos with the matching data-category:
+```html
+<div class="photo-card" data-category="new-category">
+    <!-- photo content -->
+</div>
 ```
 
-4. Open in your browser:
+## Deployment
 
-- Gallery: http://localhost:3000/
-- Admin: http://localhost:3000/admin.html
+The site automatically deploys to GitHub Pages when you push changes to the main branch. No additional configuration needed.
 
-Notes for GitHub
-
-- Do not commit `data/config.json` (contains secrets). A sample is provided as `data/config.example.json`.
-- Uploads are ignored from the repo; placeholder `.gitkeep` files are included so directory structure is preserved.
-
-Create a new GitHub repo and push these commands (example):
-
+### Local Development
+To preview locally:
 ```bash
-git init
-git add .
-git commit -m "Initial commit: photography portfolio"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<repo>.git
-git push -u origin main
+npx serve .
 ```
+Then visit `http://localhost:3000`
 
-Deployment
+## Browser Support
 
-This is a Node app (not static). Use services like Render, Railway, or Heroku to deploy. Ensure you set an environment variable or use the `setup.js` to create `data/config.json` on the host.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
+
+Tested on desktop and mobile devices.
+
+## License
+
+MIT License - feel free to use this template for your photography portfolio!
