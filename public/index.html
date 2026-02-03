@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Portfolio</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/lightbox.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="site-title">Pooja Photography</h1>
+      </div>
+      
+      <!-- Contact Section -->
+      <div class="contact-section" id="contact-section">
+        <div class="contact-header" id="contact-header">
+          <h3 class="contact-title">Contact Me</h3>
+          <button class="contact-toggle" id="contact-toggle">▼</button>
+        </div>
+        <div class="social-links" id="social-links">
+          <!-- Links populated by JS -->
+        </div>
+      </div>
+      
+      <nav class="filters" id="filters">
+        <button class="filter-btn active" data-category="all">All</button>
+      </nav>
+      <a href="/admin.html" class="admin-link">Admin Panel</a>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <main class="main">
+        <div class="gallery-grid" id="gallery">
+          <div class="loading">Loading photos...</div>
+        </div>
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <p>No photos yet. Visit the <a href="/admin.html">admin panel</a> to add some.</p>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2025 Pooja Photography</p>
+      </footer>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</button>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</button>
+    <div class="lightbox-content">
+      <img class="lightbox-image" id="lightbox-image" src="" alt="">
+      <div class="lightbox-info" id="lightbox-info">
+        <h2 class="lightbox-title" id="lightbox-title"></h2>
+        <p class="lightbox-description" id="lightbox-description"></p>
+        <div class="lightbox-tags" id="lightbox-tags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/gallery.js"></script>
+  <script src="/js/lightbox.js"></script>
+  <script src="/js/filters.js"></script>
+  <script>
+    // Disable right-click on images
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    // Disable drag on images
+    document.addEventListener('dragstart', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    // Disable Ctrl+S, Ctrl+Shift+S
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+        e.preventDefault();
+        return false;
+      }
+    });
+  </script>
+</body>
+</html>

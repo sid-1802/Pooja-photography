@@ -1,0 +1,7 @@
+{
+  "adminUsername": "admin",
+  "adminPassword": "<hashed-password-or-run-setup>",
+  "sessionSecret": "<random-session-secret>",
+  "siteName": "Pooja Photography",
+  "socialLinks": {}
+}

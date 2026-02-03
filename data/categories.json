@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "id": "cddbae5aa4474e9d",
+      "name": "Baby Shoot",
+      "slug": "baby-shoot",
+      "order": 1
+    },
+    {
+      "id": "183d1628f0fa5b96",
+      "name": "Recent",
+      "slug": "recent",
+      "order": 1
+    }
+  ]
+}
