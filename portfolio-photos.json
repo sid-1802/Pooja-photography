@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1640995200000,
+    "title": "Playful Baby Portrait",
+    "imageData": "https://images.unsplash.com/photo-1542259009421-ef4318615c45?w=600&h=600&fit=crop",
+    "category": "baby-shoot",
+    "description": "Baby playing with tiger plush toy outdoors"
+  },
+  {
+    "id": 1640995200001,
+    "title": "Curious Little Reader",
+    "imageData": "https://images.unsplash.com/photo-1518864755372-e388ee803fd4?w=600&h=600&fit=crop",
+    "category": "baby-shoot",
+    "description": "Baby exploring books and toys with glasses"
+  },
+  {
+    "id": 1640995200002,
+    "title": "Mini Musician",
+    "imageData": "https://images.unsplash.com/photo-1511537199840-c5f4bf0f3b4f?w=600&h=600&fit=crop",
+    "category": "baby-shoot",
+    "description": "Baby holding a small guitar"
+  },
+  {
+    "id": 1640995200003,
+    "title": "Innocent Eyes",
+    "imageData": "https://images.unsplash.com/photo-1505226502104-4ae8dbf0933a?w=600&h=600&fit=crop",
+    "category": "baby-shoot",
+    "description": "Close-up portrait of baby with curly hair"
+  },
+  {
+    "id": 1640995200004,
+    "title": "Joyful Smile",
+    "imageData": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&h=600&fit=crop",
+    "category": "baby-shoot",
+    "description": "Baby smiling with white outfit"
+  },
+  {
+    "id": 1640995200005,
+    "title": "Holiday Magic",
+    "imageData": "https://images.unsplash.com/photo-1518864755372-e388ee803fd4?w=600&h=600&fit=crop",
+    "category": "baby-shoot",
+    "description": "Baby in red dress with Christmas decorations"
+  }
+]

@@ -11,6 +11,9 @@ A professional photography portfolio website with category filtering, responsive
 - 📱 **Mobile Friendly** - Fully responsive design for all devices
 - ⚡ **Fast Loading** - No build process required, pure HTML/CSS/JS
 - ☁️ **GitHub Pages Ready** - Zero configuration deployment
+- 💾 **File-Based Data Storage** - Store portfolio data in JSON files
+- 🔄 **Data Persistence** - Automatic loading from local files or localStorage
+- 📤 **Export/Import** - Export your portfolio data as JSON files for GitHub commits
 
 ## Quick Start
 
@@ -52,10 +55,17 @@ Edit the content in `index.html`:
 - Photo titles and descriptions
 
 ### Add Your Own Photos
-Replace the placeholder Unsplash images:
-```html
-<img src="your-photo-url.jpg" alt="Photo description" class="photo-img">
-```
+1. **Via Admin Panel**: Log in and use the "Add Photo" feature
+2. **Via File Upload**: Upload directly from your computer
+3. **Bulk Import**: Use the "Import Data" feature to load JSON files
+
+### Data Files Structure
+The portfolio automatically loads data from these JSON files:
+- `portfolio-photos.json` - Photo collection
+- `portfolio-categories.json` - Category definitions
+- `portfolio-complete-data.json` - All data in one file
+
+You can edit these files directly or use the admin panel export feature.
 
 ### Change Colors
 Modify the color scheme in `photography-styles.css`:
@@ -64,20 +74,32 @@ Modify the color scheme in `photography-styles.css`:
 - Text colors: Adjust `#fff`, `#ddd`, `#aaa`
 
 ### Add New Categories
-1. Add a new button in the sidebar:
+1. **Via Admin Panel**: Use the "Manage Categories" feature
+2. **Via JSON Files**: Edit `portfolio-categories.json` directly
+3. **Manual HTML**: Add button in the sidebar:
 ```html
 <button class="category-btn" data-category="new-category">New Category</button>
 ```
-2. Add photos with the matching data-category:
-```html
-<div class="photo-card" data-category="new-category">
-    <!-- photo content -->
-</div>
-```
+
+### Export Your Data
+1. Log in to admin panel
+2. Click "Export Data"
+3. Download JSON files
+4. Commit files to your GitHub repository
+5. Data will automatically load for all visitors
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages when you push changes to the main branch. No additional configuration needed.
+The site automatically deploys to GitHub Pages when you push changes to the main branch. Data persistence works through:
+
+1. **localStorage** - For admin session data
+2. **JSON Files** - For permanent portfolio data
+
+### Data Management Workflow
+1. Add/edit content using admin panel
+2. Export data as JSON files
+3. Commit JSON files to GitHub
+4. Visitors automatically see your content
 
 ### Local Development
 To preview locally:
@@ -85,6 +107,11 @@ To preview locally:
 npx serve .
 ```
 Then visit `http://localhost:3000`
+
+### GitHub Pages Setup
+1. Push all files including JSON data files
+2. Enable GitHub Pages in repository settings
+3. Data loads automatically from JSON files
 
 ## Browser Support
 
